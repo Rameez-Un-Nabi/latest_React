@@ -1,13 +1,108 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  display: grid;
+  grid-template-areas:
+  "header"
+  "main1"
+  "main2"
+  "testimonials"  
+  "footer";
+  
+
+
+  font-family:sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: monospace;
+}
+
+
+header{
+  grid-area: head;
+}
+
+main.hero{
+  grid-area: main1;
+  height: 250px;
+}
+main.Food_Items{
+  grid-area: main2;
+}
+div.testimonials{
+  position: relative;
+  margin-top: 50px;
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  grid-area: testimonials;
+} 
+
+footer{
+  margin-top: 10px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  grid-area: footer;
+  display: flex;
+  
+  width: 100%;
+}
+
+
+
+/* 1. Menu Items */
+
+
+nav {
+  display: flex;
+}
+
+ul {
+  display:flex;
+  list-style: none;
+}
+
+nav ul li {
+  flex: 1 0 auto; /* Share remaining space equally */
+  text-align: center; /* Align text horizontally if needed */
+  /* Add some margin or padding for spacing: */
+  margin: 10px; /* Modify as desired */
+}
+
+
+/* 2. The display section */
+
+#hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  
+  background: #495e57;
+}
+#hero > p{
+  width: 300px;
+  overflow-wrap: break-word; /* Allow word wrapping if line breaks exceed width */
+  
+
+
+}
+
+
+#hero > img {
+ 
+
+
+width: 175px;
+height: 215px;
+
+border-radius: 16px;
+border: 1px solid #000;
+
+
 }
